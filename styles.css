@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000, #434343);
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff6f61, #ff3d00, #ffcc00, #00bcd4, #8e44ad);
+    background-size: 400% 400%;
+    color: #000000;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    animation: gradientAnimation 4s infinite;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.clock:hover {
+    transform: rotateY(10deg) scale(1.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+.clock span {
+    display: inline-block;
+    margin: 0 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.clock span:hover {
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
+.clock-text {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Enhanced Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
